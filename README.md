@@ -1,16 +1,11 @@
 RCOMP 2020-2021 Project repository template
 ===========================================
-# 1. Team members (update this information please) #
-  * 1111111 - {First and last name} 
-  * 2222222 - {First and last name} 
-  * 3333333 - {First and last name} 
-  * 4444444 - {First and last name}  
+# 1. Team members #
+  * 1191430 - Fábio Fernandes 
+  * 1181490 - Filipe Rodrigues 
+  * 1190693 - João Nogueira 
+  * 1191507 - Bárbara Pinto 
 
-Any team membership changes should be reported here, examples:
-
-Member 8888888 ({First and last name}) has left the team on 2021-03-20
-
-Member 7777777 ({First and last name}) has entered the team on 2021-04-5
 # 2. Sprints #
   * [Sprint 1](doc/sprint1/)
   * [Sprint 2](doc/sprint2/)
