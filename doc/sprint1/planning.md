@@ -1,25 +1,20 @@
-RCOMP 2019-2020 Project - Sprint 1 planning
+RCOMP 2020-2021 Project - Sprint 1 planning
 ===========================================
-### Sprint master: 1111111 ###
-(This file is to be created/edited by the sprint master only)
+### Sprint master: 1191507 ###
+
 # 1. Sprint's backlog #
-(Copy here a summary of the provided sprint's backlog)
+  Structured cabling project of an industrial private closed area with five buildings, each one with two floors.
+  
 # 2. Technical decisions and coordination #
-In this section, all technical decisions taken in the planning meeting should be mentioned. 		Most importantly, all technical decisions impacting on the subtasks implementation must be settled on this 		meeting and specified here.
+  * Optical fiber up to HC (monomode up to IC, multimode up to HC) and copper cables (cat 6A) until user end point
+  * Copper cables terminated with ISO8877 connector standard 568A
+  * Cabling redundancy on campus backbone
+  * Maximum of 2.720 outlets (considering total area of buildings)
+  * At least one telecommunication enclosure per floor
 
-#### Examples: ####
-  * Backbone cable types to be used
-  * VLAN IDs to be used
-  * VTP domains
-  * WiFi channels
-  * IPv4 networks' addresses and routers' addresses
-  * Routing protocols
-  * Application protocols outlining (further coordination may be required between members)
 # 3. Subtasks assignment #
-(For each team member (sprint master included), the description of the assigned subtask in sprint 1)
-
-#### Example: ####
-  * 1111111 - Structured cable design for building A, floors 2 and 3
-  * 2222222 - IPv4 addressing and routing configurations for building D
-  * 3333333 - Network access policies enforcement for building X
-  * 4444444 - Network application Z development
+  * 1191507 - Structured cable design for building 1, ground floor and floor 1, and overall industrial area.
+  * 1191430 - Structured cable design for building 2, ground floor and floor 1
+  * 1190693 - Structured cable design for building 3, ground floor and floor 1
+  * 1181490 - Structured cable design for building 5, ground floor and floor 1
+  Note: Building 4 will not be included in this project, since there are insufficient group members.
