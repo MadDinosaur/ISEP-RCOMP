@@ -28,12 +28,16 @@ Is a storage area and network outlets are not required there
    -. Calculations: [(101.25/10) * 2]
    Number of outlets: 22
 
+   Quantity of Cable CAT6A:
+
 #### Room 20.3:
    Dimensions:
    -. Length: 3cm -> 15m | -. Width: 2cm -> 10m
    -. Area: 150 m2
    -. Calculations: [(150/10) * 2]
-   Number of outlets: 30    
+   Number of outlets: 30
+
+   Quantity of Cable CAT6A:    
 
 #### Room 20.4:
    Dimensions:
@@ -42,12 +46,16 @@ Is a storage area and network outlets are not required there
    -. Calculations: [(180/10) * 2]
    Number of outlets: 36
 
+   Quantity of Cable CAT6A:
+
 #### Service desk (Brown surface):
    Dimensions:
    -. Length: 1.7cm -> 8.5m | -. Width: 0.4cm -> 2m
    -. Area: 17 m2
    -. Calculations: [(17/10) * 2]
    Number of outlets: 4
+
+   Quantity of Cable CAT6A:
 
 ##### Total Number Outlets: 92
 
@@ -70,12 +78,16 @@ Is a storage area and network outlets are not required there
    -. Calculations: [(45/10) * 2]
    Number of outlets: 10
 
+   Quantity of Cable CAT6A:
+
 #### Room 21.3:
    Dimensions:
    -. Length: 1.8cm → 9m | -. Width: 1cm → 5m
    -. Area: 45 m2
    -. Calculations: [(45/10) * 2]
-   Number of outlets: 10    
+   Number of outlets: 10
+
+   Quantity of Cable CAT6A:    
 
 #### Room 21.4:
    Dimensions:
@@ -84,12 +96,16 @@ Is a storage area and network outlets are not required there
    -. Calculations: [(45/10) * 2]
    Number of outlets: 10
 
+   Quantity of Cable CAT6A:
+
 #### Room 21.5:
    Dimensions:
    -. Length: 1.8cm → 9m | -. Width: 1cm → 5m
    -. Area: 45 m2
    -. Calculations: [(45/10) * 2]
    Number of outlets: 10
+
+   Quantity of Cable CAT6A:
 
 #### Room 21.6:
    Dimensions:
@@ -98,12 +114,16 @@ Is a storage area and network outlets are not required there
    -. Calculations: [(55/10) * 2]
    Number of outlets: 12
 
+   Quantity of Cable CAT6A:
+
 #### Room 21.7:
    Dimensions:
    -. Length: 2cm → 10m | -. Width: 1.1cm → 5.5m
    -. Area: 55 m2
    -. Calculations: [(55/10) * 2]
    Number of outlets: 12
+
+   Quantity of Cable CAT6A:
 
 #### Room 21.8:
    Dimensions:
@@ -112,12 +132,16 @@ Is a storage area and network outlets are not required there
    -. Calculations: [(55/10) * 2]
    Number of outlets: 12
 
+   Quantity of Cable CAT6A:
+
 #### Room 21.9:
    Dimensions:
    -. Length: 2.8cm → 14m | -. Width: 1.3cm → 6.5m
    -. Area: 91 m2
    -. Calculations: [(91/10) * 2]
    Number of outlets: 20
+
+   Quantity of Cable CAT6A:
 
 #### Room 21.10:
    Dimensions:
@@ -126,11 +150,15 @@ Is a storage area and network outlets are not required there
    -. Calculations: [(57.5/10) * 2]
    Number of outlets: 14
 
+   Quantity of Cable CAT6A:
+
 #### Room 21.11:
    Dimensions:
    -. Length: 2.3cm → 11.5m | -. Width: 1cm → 5m
    -. Area: 57.5 m2
    -. Calculations: [(57.5/10) * 2]
    Number of outlets: 14
+
+   Quantity of Cable CAT6A:
 
 ##### Total Number Outlets: 124
