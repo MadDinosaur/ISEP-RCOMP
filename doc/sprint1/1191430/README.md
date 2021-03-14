@@ -81,6 +81,8 @@ HC → CP [Room 20.4] (Total cable): 42.5 m
 * 31 m of Fiber Optic Cable Type Multimode
 * 2 Access Points
 
+![GroundFloor.png](GroundFloor.png)
+
 ## First Floor:
 
 I decided to place the HC in room 21.2 because it is closer to the floor cable passageway, giving the possibility to access the previous floor reducing the need for fiber optic cable type multimode.
@@ -222,3 +224,5 @@ HC → CP [Room 21.11] (Total cable): 88.5 m
 * 1312 m of CAT6A cable
 * 52 m of Fiber Optic Cable Type Multimode
 * 2 Access Points
+
+![FloorOne.png](FloorOne.png)
