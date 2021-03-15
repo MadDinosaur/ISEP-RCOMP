@@ -55,15 +55,15 @@ Taking into account that the rule of at least 2 outlets per 10 m2 is followed.
 
 ##### Total Number Outlets: 92
 
-Room 20.2 (Total cable): 203.5 m
+Room 20.2 (Total cable): 204 m
 Room 20.3 (Total cable): 262 m
-Room 20.4 (Total cable): 361.5 m
+Room 20.4 (Total cable): 362 m
 Service desk (Total cable): 30 m
 
-HC → CP [Room 20.3] (Total cable): 27.5 m
-HC → CP [Room 20.4] (Total cable): 42.5 m
+HC → CP [Room 20.3] (Total cable): 28 m
+HC → CP [Room 20.4] (Total cable): 43 m
 
-##### Total Cable CAT6A: 897 m
+##### Total Cable CAT6A: 929 m
 ##### Total Fiber Optic Cable Type Multimode: 31 m
 
 #### Inventory:
@@ -100,7 +100,7 @@ Is a storage area and network outlets are not required there
    -. Length: 0.8cm → 4m | -. Width: 1.3cm → 6.5m
    -. Area: 26 m2
    -. Calculations: [(26/10) * 2]
-   Number of outlets: 5
+   Number of outlets: 6
 
 #### Room 21.2:
    Dimensions:
@@ -184,29 +184,29 @@ Is a storage area and network outlets are not required there
 
 ##### Total Number Outlets: 124
 
-Room 21.1 (Total cable): 110.5 m
+Room 21.1 (Total cable): 122 m
 Room 21.2 (Total cable): 58 m
 Room 21.3 (Total cable): 58 m
 Room 21.4 (Total cable): 58 m
 Room 21.5 (Total cable): 58 m
-Room 21.6 (Total cable): 79.5 m
-Room 21.7 (Total cable): 79.5 m
-Room 21.8 (Total cable): 79.5 m
+Room 21.6 (Total cable): 80 m
+Room 21.7 (Total cable): 80 m
+Room 21.8 (Total cable): 80 m
 Room 21.9 (Total cable): 156 m
-Room 21.10 (Total cable): 97.5 m
-Room 21.11 (Total cable): 97.5 m
+Room 21.10 (Total cable): 98 m
+Room 21.11 (Total cable): 98 m
 
 HC → CP [Room 21.3] (Total cable): 3 m
-HC → CP [Room 21.4] (Total cable): 8.5 m
-HC → CP [Room 21.5] (Total cable): 15.5 m
+HC → CP [Room 21.4] (Total cable): 9 m
+HC → CP [Room 21.5] (Total cable): 16 m
 HC → CP [Room 21.6] (Total cable): 38 m
-HC → CP [Room 21.7] (Total cable): 43.5 m
+HC → CP [Room 21.7] (Total cable): 44 m
 HC → CP [Room 21.8] (Total cable): 50 m
 HC → CP [Room 21.9] (Total cable): 56 m
 HC → CP [Room 21.10] (Total cable): 77 m
-HC → CP [Room 21.11] (Total cable): 88.5 m
+HC → CP [Room 21.11] (Total cable): 88 m
 
-##### Total Cable CAT6A: 1312 m
+##### Total Cable CAT6A: 1327 m
 ##### Total Fiber Optic Cable Type Multimode: 52 m
 
 #### Inventory:
