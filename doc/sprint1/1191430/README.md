@@ -2,13 +2,18 @@ RCOMP 2020-2021 Project - Sprint 1 - Member 1191430 folder
 ===========================================
 ## Building 2:
 
+Regarding the graphs shown in the images, I decided to represent the route of the cables instead of representing them all numerically.
+
+It is represented 2 types of routes, route through the ground and route through the air, since to connect the cable to the access point it is necessary that it reaches the ceiling.
+
+
 ## Ground Floor:
 
 Room 20.1 is considered a storage room so there is no need to put any type of outlet there, as well as the bathrooms and corridors.
 
 I decided to place the IC in room 20.2 because it is closer to the celling cable passageway and to the entrance, giving the possibility to access the next floor reducing the need for fiber optic cable type monomode.
 
-Also I placed the HC with the same purpose, closest to the IC reducing the need for fiber optic cable type multimode.
+Also I placed the HC next to the IC with the same purpose, reducing the need for fiber optic cable type multimode.
 
 I also decided to place consolidation points in all rooms to reduce the size of the cable used and the load overload.
 
@@ -53,10 +58,10 @@ Taking into account that the rule of at least 2 outlets per 10 m2 is followed.
 
 ##### Total Number Outlets: 92
 
-Room 20.2 (Total cable): 204 m
-Room 20.3 (Total cable): 262 m
-Room 20.4 (Total cable): 362 m
-Service desk (Total cable): 30 m
+Room 20.2 (Total cable used): 204 m
+Room 20.3 (Total cable used): 262 m
+Room 20.4 (Total cable used): 362 m
+Service desk (Total cable in the desk): 30 m
 
 HC → CP [Room 20.3] (Total cable): 28 m
 HC → CP [Room 20.4] (Total cable): 43 m
@@ -69,16 +74,19 @@ HC → CP [Room 20.4] (Total cable): 43 m
 * 1 IC:
     - Fiber Optic Patch Panel 24
     - Fiber Optic Switch 24
+    - Enclosure size: 4U (2U for all devices + 50% upgrade)
 
 * 1 HC:
     - Coper Switch 48
     - Coper Patch Panel 48
     - Fiber Optic Patch Panel 24
     - Fiber Optic Switch 24
+    - Enclosure size: 12U (6U for all devices + 50% upgrade)
 
 * 2 CP:
     - 2 Coper Switch 48
     - 2 Coper Patch Panel 48
+    - Enclosure size: 8U (4U for all devices + 50% upgrade)
 
 * 92 Outlets
 * 108 Patch Coords
@@ -187,17 +195,17 @@ Is a storage area and network outlets are not required there
 
 ##### Total Number Outlets: 124
 
-Room 21.1 (Total cable): 122 m
-Room 21.2 (Total cable): 58 m
-Room 21.3 (Total cable): 58 m
-Room 21.4 (Total cable): 58 m
-Room 21.5 (Total cable): 58 m
-Room 21.6 (Total cable): 80 m
-Room 21.7 (Total cable): 80 m
-Room 21.8 (Total cable): 80 m
-Room 21.9 (Total cable): 156 m
-Room 21.10 (Total cable): 98 m
-Room 21.11 (Total cable): 98 m
+Room 21.1 (Total cable used): 122 m
+Room 21.2 (Total cable used): 58 m
+Room 21.3 (Total cable used): 58 m
+Room 21.4 (Total cable used): 58 m
+Room 21.5 (Total cable used): 58 m
+Room 21.6 (Total cable used): 80 m
+Room 21.7 (Total cable used): 80 m
+Room 21.8 (Total cable used): 80 m
+Room 21.9 (Total cable used): 156 m
+Room 21.10 (Total cable used): 98 m
+Room 21.11 (Total cable used): 98 m
 
 HC → CP [Room 21.3] (Total cable): 3 m
 HC → CP [Room 21.4] (Total cable): 9 m
@@ -215,14 +223,15 @@ HC → CP [Room 21.11] (Total cable): 88 m
 #### Inventory:
 
 * 1 HC:
-    - Fiber Optic Switch 24
-    - Fiber Optic Patch Panel 24
-    - Coper Switch 48
-    - Coper Patch Panel 48
+    - Fiber Optic Patch Panel 24  
+    - Copper Switch 48
+    - Copper Patch Panel 48
+    - Enclosure size: 10U (5U for all devices + 50% for upgrade)
 
 * 9 CP:
-    - 9 Coper Switch 24
-    - 9 Coper Patch Panel 24
+    - 9 Copper Switch 24
+    - 9 Copper Patch Panel 24
+    - Enclosure size: 4U (2U for all devices + 50% for upgrade)
 
 * 124 Outlets
 * 148 Patch Coords
