@@ -18,8 +18,6 @@ I decided to put the HC and the IC in the same closet to reduce the space needed
 
 Taking into account that the rule of at least 2 outlets per 10 m2 is followed.
 
-##### Scale: 2cm → 10m.
-
 #### Room 20.1:
    Dimensions:
    -. Length: 0.8cm → 4m | -. Width: 1.3cm → 6.5m
@@ -63,22 +61,30 @@ Service desk (Total cable): 30 m
 HC → CP [Room 20.3] (Total cable): 28 m
 HC → CP [Room 20.4] (Total cable): 43 m
 
-##### Total Cable CAT6A: 929 m
-##### Total Fiber Optic Cable Type Multimode: 31 m
+##### Total Cable CAT6A: 934 m
+##### Total Fiber Optic Cable Type Monomode: 41 m
 
 #### Inventory:
 
-* 1 IC
+* 1 IC:
+    - Fiber Optic Patch Panel 24
+    - Fiber Optic Switch 24
+
 * 1 HC:
-    - Switch Fiber Optic 48
-    - Patch Panel Fiber Optic 48
+    - Coper Switch 48
+    - Coper Patch Panel 48
+    - Fiber Optic Patch Panel 24
+    - Fiber Optic Switch 24
+
 * 2 CP:
-    - 2 Switch Fiber Optic 48
-    - 2 Patch Panel Fiber Optic 48
+    - 2 Coper Switch 48
+    - 2 Coper Patch Panel 48
+
 * 92 Outlets
 * 108 Patch Coords
-* 897 m of CAT6A cable
-* 31 m of Fiber Optic Cable Type Multimode
+* 934 m of CAT6A cable
+* 40 m of Fiber Optic Cable Type Monomode
+* 1m of Fiber Optic Cable Type Multimode
 * 2 Access Points
 
 ![GroundFloor.png](GroundFloor.png)
@@ -90,9 +96,6 @@ I decided to place the HC in room 21.2 because it is closer to the floor cable p
 I also decided to place consolidation points in all rooms even though it will increase the size of the cable used, it will reduce the load overload.
 
 Considering that the entire space must have access to wi-fi, I decided to strategically place 2 APs, one at the beginning of room 21.4 and another at the beginning of room 21.8, because their range is 50m in diameter, being possible to cover the entire floor.
-
-
-##### Scale: 2cm → 10m.
 
 #### Room 21.1:
 Is a storage area and network outlets are not required there
@@ -206,23 +209,25 @@ HC → CP [Room 21.9] (Total cable): 56 m
 HC → CP [Room 21.10] (Total cable): 77 m
 HC → CP [Room 21.11] (Total cable): 88 m
 
-##### Total Cable CAT6A: 1327 m
-##### Total Fiber Optic Cable Type Multimode: 52 m
+##### Total Cable CAT6A: 1361  m
+##### Total Fiber Optic Cable Type Multimode: 50 m
 
 #### Inventory:
 
 * 1 HC:
-    - Switch Fiber Optic 48
-    - Patch Panel Fiber Optic 48
+    - Fiber Optic Switch 24
+    - Fiber Optic Patch Panel 24
+    - Coper Switch 48
+    - Coper Patch Panel 48
+
 * 9 CP:
-    - 8 Switch Fiber Optic 24
-    - 8 Patch Panel Fiber Optic 24
-    - 1 Switch Fiber Optic 48
-    - 1 Patch Panel Fiber Optic 48
+    - 9 Coper Switch 24
+    - 9 Coper Patch Panel 24
+
 * 124 Outlets
 * 148 Patch Coords
-* 1312 m of CAT6A cable
-* 52 m of Fiber Optic Cable Type Multimode
+* 1361 m of CAT6A cable
+* 50 m of Fiber Optic Cable Type Multimode
 * 2 Access Points
 
 ![FloorOne.png](FloorOne.png)
