@@ -6,6 +6,7 @@ Regarding the graphs shown in the images, I decided to represent the route of th
 
 It is represented 2 types of routes, route through the ground and route through the air, since to connect the cable to the access point it is necessary that it reaches the ceiling.
 
+Regarding the placement of Access Points in my building, it is necessary for each one to be assigned a channel, in this case to avoid collisions, I chose to assign channel 11 and 6 respectively on the ground floor while on the first floor I assign channel 6 and 1 respectively.
 
 ## Ground Floor:
 
@@ -89,7 +90,12 @@ HC → CP [Room 20.4] (Total cable): 43 m
     - Enclosure size: 8U (4U for all devices + 50% upgrade)
 
 * 92 Outlets
-* 108 Patch Coords
+
+* Patch Coords:
+    - 48 Patch Coords of Fiber Opitc with 0.5m
+    - 96 Patch Coords of Copper with 0.5m
+    - 92 Patch Coords of Copper with 5m
+
 * 934 m of CAT6A cable
 * 40 m of Fiber Optic Cable Type Monomode
 * 1m of Fiber Optic Cable Type Multimode
@@ -234,7 +240,12 @@ HC → CP [Room 21.11] (Total cable): 88 m
     - Enclosure size: 4U (2U for all devices + 50% for upgrade)
 
 * 124 Outlets
-* 148 Patch Coords
+
+* Patch Coords:
+    - 24 Patch Coords of Fiber Opitc with 0.5m
+    - 264 Patch Coords of Copper with 0.5m
+    - 124 Patch Coords of Copper with 5m
+
 * 1361 m of CAT6A cable
 * 50 m of Fiber Optic Cable Type Multimode
 * 2 Access Points
