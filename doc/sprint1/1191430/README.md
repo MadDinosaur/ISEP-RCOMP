@@ -25,37 +25,51 @@ I decided to put the HC and the IC in the same closet to reduce the space needed
 Taking into account that the rule of at least 2 outlets per 10 m2 is followed.
 
 #### Room 20.1:
-   Dimensions:
-   -. Length: 0.8cm → 4m | -. Width: 1.3cm → 6.5m
-   -. Area: 26 m2
+
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |0.8cm → 4m|1.3cm → 6.5m|26 m2|
 
 #### Room 20.2:
-   Dimensions:
-   -. Length: 2.7cm → 13.5m | -. Width: 1.5cm → 7.5m
-   -. Area: 101.25 m2
-   -. Calculations: [(101.25/10) * 2]
-   Number of outlets: 22
+
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |2.7cm → 13.5m|1.5cm → 7.5m|101.25 m22|
+
+  - Calculations: [(101.25/10) * 2]
+  - Number of outlets: 22
 
 #### Room 20.3:
-   Dimensions:
-   -. Length: 3cm → 15m | -. Width: 2cm → 10m
-   -. Area: 150 m2
-   -. Calculations: [(150/10) * 2]
-   Number of outlets: 30
+
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |3cm → 15m|2cm → 10m|150 m2|
+
+   - Calculations: [(150/10) * 2]
+   - Number of outlets: 30
 
 #### Room 20.4:
-   Dimensions:
-   -. Length: 4cm → 20m | -. Width: 1.8cm → 9m
-   -. Area: 180 m2
-   -. Calculations: [(180/10) * 2]
-   Number of outlets: 36
+
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |4cm → 20m|1.8cm → 9m|180 m2|
+
+   - Calculations: [(180/10) * 2]
+   - Number of outlets: 36
 
 #### Service desk (Brown surface):
-   Dimensions:
-   -. Length: 1.7cm → 8.5m | -. Width: 0.4cm → 2m
-   -. Area: 17 m2
-   -. Calculations: [(17/10) * 2]
-   Number of outlets: 4
+
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |1.7cm → 8.5m|0.4cm → 2m|17 m2|
+
+   - Calculations: [(17/10) * 2]
+   - Number of outlets: 4
 
 ##### Total Number Outlets: 92
 
@@ -92,9 +106,8 @@ HC → CP [Room 20.4] (Total cable): 43 m
 * 92 Outlets
 
 * Patch Coords:
-    - 48 Patch Coords of Fiber Opitc with 0.5m
-    - 96 Patch Coords of Copper with 0.5m
-    - 92 Patch Coords of Copper with 5m
+    - 48 Patch Cords of Fiber Opitc with 0.5m
+    - 96 Patch Cords of Copper with 0.5m
 
 * 934 m of CAT6A cable
 * 40 m of Fiber Optic Cable Type Monomode
@@ -113,91 +126,114 @@ Considering that the entire space must have access to wi-fi, I decided to strate
 
 #### Room 21.1:
 Is a storage area and network outlets are not required there
-   Dimensions:
-   -. Length: 0.8cm → 4m | -. Width: 1.3cm → 6.5m
-   -. Area: 26 m2
-   -. Calculations: [(26/10) * 2]
-   Number of outlets: 6
+
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |0.8cm → 4m|1.3cm → 6.5m|26 m2|
+
+   - Calculations: [(26/10) * 2]
+   - Number of outlets: 6
 
 #### Room 21.2:
-   Dimensions:
-   -. Length: 1.8cm → 9m | -. Width: 1cm → 5m
-   -. Area: 45 m2
-   -. Calculations: [(45/10) * 2]
-   Number of outlets: 10
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |1.8cm → 9m|1cm → 5m|45 m2 |
+
+   - Calculations: [(45/10) * 2]
+   - Number of outlets: 10
 
 #### Room 21.3:
-   Dimensions:
-   -. Length: 1.8cm → 9m | -. Width: 1cm → 5m
-   -. Area: 45 m2
-   -. Calculations: [(45/10) * 2]
-   Number of outlets: 10
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |1.8cm → 9m|1cm → 5m|45 m2|
+
+   - Calculations: [(45/10) * 2]
+   - Number of outlets: 10
 
 #### Room 21.4:
-   Dimensions:
-   -. Length: 1.8cm → 9m | -. Width: 1cm → 5m
-   -. Area: 45 m2
-   -. Calculations: [(45/10) * 2]
-   Number of outlets: 10
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |1.8cm → 9m|1cm → 5m|45 m2 |
+
+   - Calculations: [(45/10) * 2]
+   - Number of outlets: 10
 
 #### Room 21.5:
-   Dimensions:
-   -. Length: 1.8cm → 9m | -. Width: 1cm → 5m
-   -. Area: 45 m2
-   -. Calculations: [(45/10) * 2]
-   Number of outlets: 10
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |1.8cm → 9m|1cm → 5m|45 m2 |
+
+   - Calculations: [(45/10) * 2]
+   - Number of outlets: 10
 
 #### Room 21.6:
-   Dimensions:
-   -. Length: 2cm → 10m | -. Width: 1.1cm → 5.5m
-   -. Area: 55 m2
-   -. Calculations: [(55/10) * 2]
-   Number of outlets: 12
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |2cm → 10m|1.1cm → 5.5m|55 m2|
+
+   - Calculations: [(55/10) * 2]
+   - Number of outlets: 12
 
 #### Room 21.7:
-   Dimensions:
-   -. Length: 2cm → 10m | -. Width: 1.1cm → 5.5m
-   -. Area: 55 m2
-   -. Calculations: [(55/10) * 2]
-   Number of outlets: 12
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |2cm → 10m|1.1cm → 5.5m|55 m2|
+
+   - Calculations: [(55/10) * 2]
+   - Number of outlets: 12
 
 #### Room 21.8:
-   Dimensions:
-   -. Length: 2 cm → 8.5m | -. Width: 1.1cm → 5.5m
-   -. Area: 55 m2
-   -. Calculations: [(55/10) * 2]
-   Number of outlets: 12
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |2cm → 10m|1.1cm → 5.5m|55 m2|
+
+   - Calculations: [(55/10) * 2]
+   - Number of outlets: 12
 
 #### Room 21.9:
-   Dimensions:
-   -. Length: 2.8cm → 14m | -. Width: 1.3cm → 6.5m
-   -. Area: 91 m2
-   -. Calculations: [(91/10) * 2]
-   Number of outlets: 20
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |2.8cm → 14m|1.3cm → 6.5m|91 m2|
+
+   - Calculations: [(91/10) * 2]
+   - Number of outlets: 20
 
 #### Room 21.10:
-   Dimensions:
-   -. Length: 2.3cm → 11.5m | -. Width: 1cm → 5m
-   -. Area: 57.5 m2
-   -. Calculations: [(57.5/10) * 2]
-   Number of outlets: 14
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |2.3cm → 11.5m|1cm → 5m|57.5 m2|
+
+   - Calculations: [(57.5/10) * 2]
+   - Number of outlets: 14
 
 #### Room 21.11:
-   Dimensions:
-   -. Length: 2.3cm → 11.5m | -. Width: 1cm → 5m
-   -. Area: 57.5 m2
-   -. Calculations: [(57.5/10) * 2]
-   Number of outlets: 14
 
+   #### Dimensions:
+   | Length: | Width: | Area: |
+   |--------|-------|---------|
+   |2.3cm → 11.5m|1cm → 5m|57.5 m2|
+
+   - Calculations: [(57.5/10) * 2]
+   - Number of outlets: 14
 
 ##### Total Number Outlets: 124
 
@@ -242,9 +278,8 @@ HC → CP [Room 21.11] (Total cable): 88 m
 * 124 Outlets
 
 * Patch Coords:
-    - 24 Patch Coords of Fiber Opitc with 0.5m
-    - 264 Patch Coords of Copper with 0.5m
-    - 124 Patch Coords of Copper with 5m
+    - 24 Patch Cords of Fiber Opitc with 0.5m
+    - 264 Patch Cords of Copper with 0.5m
 
 * 1361 m of CAT6A cable
 * 50 m of Fiber Optic Cable Type Multimode
