@@ -10,8 +10,10 @@ Each floor has only one HC since the area of each one is smaller than 1000 squar
 
 Copper cables are of type S/UTP since no information is known about electrical cable schematics, in order to prevent possible EMI without expending too much budget.
 
+The Access Points channels are: channel 1 for the ground floor and channel 6 for the first floor, as to not interfere with each other.
+
 ## Campus Backbone
-![Campus schematic plan] (campus.jpg)
+![Campus schematic plan](campus.jpg)
 
 Outside network connection is directed at building 1, which houses the MC and distributes accross other buildings (connecting to the respective IC) through monomode bidirectional fibre optic cabling.
 
@@ -26,7 +28,7 @@ Redundancy is implemented to assure that if a cable fails, the network stays fun
 | **Total Cabling** | **3 080 m** |
 
 ## Building 1 - Ground Floor
-![Ground floor schematic plan] (ground_floor.jpg)
+![Ground floor schematic plan](ground_floor.jpg)
 
 Outside network connection is directed through ceiling cable passeway to the datacenter on the floor above (IC).
 Cabling from IC is redirected back to this floor and into the HC. There are CP on 10.2 and 10.3 due to the high outlet density (close to 24 or greater).
@@ -52,13 +54,17 @@ Approximate dimensions and resource usage:
 |------------|------------|------|----------------|---------------|--------|------|
 |12 m | 11 m | 132 sq m | 28 | 210 m | 34 m | 244 m |
 
+Fibre cabling length is divided into aprox. 6 m of monomode type (from the outside) + 28 m of multimode type (from IC on first floor).
+
 Inventory
 - 28 Outlets
 - 1 Telecommunications Enclosure (HC and CP) of size 24U
 - 2 CAT6A Patch Panel (24 ports) for CP
 - 1 CAT6A Patch Panel (24 ports) for HC
+- 1 Fibre Optics Patch Panel (24 ports) for HC
 - 1 CAT6A Patch Panel (24 ports) to accommodate upgrades.
-- 124 Patch cords (96 0.5m long for TE + 28 5m long for end-user equipment)
+- 124 copper patch cords (96 0.5m long for TE + 28 5m long for end-user equipment)
+- 24 fibre optics patch cords (0.5m long)
 
 ### 10.3
 Approximate dimensions and resource usage:
@@ -77,12 +83,19 @@ Inventory
 - 6 Patch cords (up to 5 m long)
 
 ## Building 1 - First Floor
-![First floor schematic plan] (first_floor.jpg)
+![First floor schematic plan](first_floor.jpg)
 
 The HC on this floor connects all network outlets of area 11.2 as well as CP for areas 11.3 and 11.4 (which have a higher density of outlets).
 
 ### 11.1
 This room houses the datacenter. Wiring and outlets are out of scope for this project.
+
+Inventory:
+- 1 CAT6A Patch Panel (24 ports) for HC
+- 1 Fibre Optics Patch Panel (24 ports) for HC
+- 1 Fibre Optics Patch Panel (24 ports) for IC
+- 24 copper patch cords (0.5m long)
+- 48 fibre optics patch cords (0.5m long)
 
 ### 11.2
 Approximate dimensions and resource usage:
@@ -124,8 +137,7 @@ Inventory:
 - 28 Outlets
 - 1 CAT6A Patch Panel (48 ports)
 - 1 Telecommunications Enclosure of size 6U
-- 48 Patch cords
-- 76 Patch cords (24 0.5m long for TE + 18 5m long for end-user equipment) 
+- 76 Patch cords (28 0.5m long for TE + 48 5m long for end-user equipment) 
 
 ### 11.5
 This room is for storage and requires no outlets or cabling.
