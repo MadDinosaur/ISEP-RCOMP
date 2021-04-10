@@ -28,6 +28,7 @@ RCOMP 2019-2020 Project - Sprint 2 planning
 |Buidling1_Wifi|317|
 |Building1_DMZ|318|
 |Buidling1_VoIP|319|
+|BackBone|340|
 
 #### Building 2
 |VLAN Name      | VLAN ID       |
@@ -37,6 +38,7 @@ RCOMP 2019-2020 Project - Sprint 2 planning
 |Buidling2_Wifi|322|
 |Building2_DMZ|323|
 |Buidling2_VoIP|324|
+|BackBone|340|
 
 #### Building 3
 |VLAN Name      | VLAN ID       |
@@ -46,6 +48,7 @@ RCOMP 2019-2020 Project - Sprint 2 planning
 |Buidling3_Wifi|327|
 |Building3_DMZ|328|
 |Buidling3_VoIP|329|
+|BackBone|340|
 
 #### Building 5
 |VLAN Name      | VLAN ID       |
@@ -55,6 +58,7 @@ RCOMP 2019-2020 Project - Sprint 2 planning
 |Buidling5_Wifi|332|
 |Building5_DMZ|333|
 |Buidling5_VoIP|334|
+|BackBone|340|
 
 
 # 3. Subtasks assignment #
