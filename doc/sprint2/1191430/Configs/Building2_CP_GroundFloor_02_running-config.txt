@@ -18,15 +18,15 @@ interface GigabitEthernet0/1
  switchport mode trunk
 !
 interface GigabitEthernet1/1
- switchport mode trunk
+ switchport access vlan 320
 !
-interface FastEthernet6/1
+interface GigabitEthernet6/1
 !
-interface FastEthernet7/1
+interface GigabitEthernet7/1
 !
-interface FastEthernet8/1
+interface GigabitEthernet8/1
 !
-interface FastEthernet9/1
+interface GigabitEthernet9/1
 !
 interface Vlan1
  no ip address
