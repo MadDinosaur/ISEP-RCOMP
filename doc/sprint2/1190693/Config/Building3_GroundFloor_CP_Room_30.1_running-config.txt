@@ -14,10 +14,11 @@ hostname Switch
 spanning-tree mode pvst
 spanning-tree extend system-id
 !
-interface FastEthernet8/1
+interface GigabitEthernet8/1
  switchport access vlan 325
 !
-interface FastEthernet9/1
+interface GigabitEthernet9/1
+ switchport mode trunk
 !
 interface Vlan1
  no ip address
