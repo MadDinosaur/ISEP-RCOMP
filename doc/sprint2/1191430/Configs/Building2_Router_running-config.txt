@@ -39,30 +39,6 @@ interface FastEthernet0/0
  duplex auto
  speed auto
 !
-interface FastEthernet0/0.1
- encapsulation dot1Q 340
- ip address 10.126.82.1 255.255.255.128
-!
-interface FastEthernet0/0.2
- encapsulation dot1Q 320
- ip address 10.126.84.1 255.255.255.192
-!
-interface FastEthernet0/0.3
- encapsulation dot1Q 321
- ip address 10.126.83.129 255.255.255.128
-!
-interface FastEthernet0/0.4
- encapsulation dot1Q 322
- ip address 10.126.82.129 255.255.255.128
-!
-interface FastEthernet0/0.5
- encapsulation dot1Q 323
- ip address 10.126.87.65 255.255.255.240
-!
-interface FastEthernet0/0.6
- encapsulation dot1Q 324
- ip address 10.126.86.193 255.255.255.192
-!
 interface FastEthernet0/1
  no ip address
  duplex auto

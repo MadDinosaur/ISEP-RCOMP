@@ -14,6 +14,10 @@ hostname Switch
 spanning-tree mode pvst
 spanning-tree extend system-id
 !
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet1/1
+!
 interface GigabitEthernet6/1
  switchport mode trunk
 !
@@ -22,7 +26,6 @@ interface GigabitEthernet7/1
 !
 interface GigabitEthernet8/1
  switchport access vlan 323
- switchport mode access
 !
 interface GigabitEthernet9/1
  switchport mode trunk
