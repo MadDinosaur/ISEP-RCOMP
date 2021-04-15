@@ -39,6 +39,30 @@ interface FastEthernet0/0
  duplex auto
  speed auto
 !
+interface FastEthernet0/0.1
+ encapsulation dot1Q 340
+ ip address 10.126.82.1 255.255.255.128
+!
+interface FastEthernet0/0.2
+ encapsulation dot1Q 320
+ ip address 10.126.84.1 255.255.255.192
+!
+interface FastEthernet0/0.3
+ encapsulation dot1Q 321
+ ip address 10.126.83.129 255.255.255.128
+!
+interface FastEthernet0/0.4
+ encapsulation dot1Q 322
+ ip address 10.126.82.129 255.255.255.128
+!
+interface FastEthernet0/0.5
+ encapsulation dot1Q 323
+ ip address 10.126.87.65 255.255.255.240
+!
+interface FastEthernet0/0.6
+ encapsulation dot1Q 324
+ ip address 10.126.86.193 255.255.255.192
+!
 interface FastEthernet0/1
  no ip address
  duplex auto
@@ -49,7 +73,20 @@ interface Vlan1
  no ip address
  shutdown
 !
+router rip
+!
 ip classless
+ip route 10.126.80.0 255.255.255.0 10.126.82.2 
+ip route 10.126.81.0 255.255.255.0 10.126.82.4 
+ip route 10.126.84.64 255.255.255.192 10.126.82.2 
+ip route 10.126.84.128 255.255.255.192 10.126.82.4 
+ip route 10.126.84.192 255.255.255.192 10.126.82.4 
+ip route 10.126.85.0 255.255.255.192 10.126.82.2 
+ip route 10.126.85.192 255.255.255.192 10.126.82.2 
+ip route 10.126.86.0 255.255.255.192 10.126.82.2 
+ip route 10.126.86.64 255.255.255.192 10.126.82.4 
+ip route 10.126.86.128 255.255.255.192 10.126.82.4 
+ip route 0.0.0.0 0.0.0.0 10.126.82.3 
 !
 ip flow-export version 9
 !

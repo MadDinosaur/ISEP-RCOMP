@@ -18,6 +18,7 @@ interface GigabitEthernet8/1
  switchport access vlan 321
 !
 interface GigabitEthernet9/1
+ switchport mode trunk
 !
 interface Vlan1
  no ip address
