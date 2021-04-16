@@ -10,7 +10,12 @@ RCOMP 2019-2020 Project - Sprint 2 planning
 |T.2.2    |Development of a layer two and layer three Packet Tracer simulation for building 2, and also encompassing the campus backbone.|
 |T.2.3    |Development of a layer two and layer three Packet Tracer simulation for building 3, and also encompassing the campus backbone.|
 |T.2.5    |Development of a layer two and layer three Packet Tracer simulation for building 5, and also encompassing the campus backbone.|
+
 # 2. Technical decisions and coordination #
+
+We decided to use the gigabit ports in this sprint, because in sprint 1 we used category 6A cables that allow us to have up to 10gbps of data rate.
+
+We had to make some small changes in relation to the previous sprint, since for this sprint it is necessary to follow the STP, therefore, we have inserted redundancy at the level of HCs.
 
 #### Packet Tracer Version: 7.3.1
 
