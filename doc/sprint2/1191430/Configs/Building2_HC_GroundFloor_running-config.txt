@@ -26,12 +26,15 @@ interface GigabitEthernet5/1
  switchport mode trunk
 !
 interface GigabitEthernet6/1
- switchport access vlan 324
+ switchport access vlan 320
+ switchport mode access
+ switchport voice vlan 324
 !
 interface GigabitEthernet7/1
 !
 interface GigabitEthernet8/1
- switchport access vlan 320
+ switchport mode access
+ switchport voice vlan 324
 !
 interface GigabitEthernet9/1
  switchport access vlan 322
