@@ -10,7 +10,12 @@ RCOMP 2019-2020 Project - Sprint 2 planning
 |T.2.2    |Development of a layer two and layer three Packet Tracer simulation for building 2, and also encompassing the campus backbone.|
 |T.2.3    |Development of a layer two and layer three Packet Tracer simulation for building 3, and also encompassing the campus backbone.|
 |T.2.5    |Development of a layer two and layer three Packet Tracer simulation for building 5, and also encompassing the campus backbone.|
+
 # 2. Technical decisions and coordination #
+
+We decided to use the gigabit ports in this sprint, because in sprint 1 we used category 6A cables that allow us to have up to 10gbps of data rate.
+
+We had to make some small changes in relation to the previous sprint, since for this sprint it is necessary to follow the STP, therefore, we have inserted redundancy at the level of HCs.
 
 #### Packet Tracer Version: 7.3.1
 
@@ -102,6 +107,24 @@ RCOMP 2019-2020 Project - Sprint 2 planning
 |1|VoIP|20|10.126.87.32/27|255.255.255.224|10.126.87.32|10.126.87.63|10.126.87.33|10.126.87.62|
 |2|DMZ|12|10.126.87.64/28|255.255.255.240|10.126.87.64|10.126.87.79|10.126.87.65|10.126.87.78|
 
-# 5. Subnet Address Process
+# 5. Static Routing Tables
+
+## Routing Table Building nº 2
+
+|    Building    |    Network     |      Mask       |    Next Hop   |     
+|:--------------:|:--------------:|:---------------:|:-------------:|
+|       3        |  10.126.80.0   | 255.255.255.0   |  10.126.82.2  |
+|       5        |  10.126.81.0   | 255.255.255.0   |  10.126.82.4  |
+|       3        |  10.126.84.64  | 255.255.255.192 |  10.126.82.2  |
+|       5        |  10.126.84.128 | 255.255.255.192 |  10.126.82.4  |
+|       5        |  10.126.84.192 | 255.255.255.192 |  10.126.82.4  |  
+|       3        |  10.126.85.0   | 255.255.255.192 |  10.126.82.2  |
+|       3        |  10.126.85.192 | 255.255.255.192 |  10.126.82.2  |
+|       3        |  10.126.86.0   | 255.255.255.192 |  10.126.82.2  |
+|       5        |  10.126.86.64  | 255.255.255.192 |  10.126.82.4  |   
+|       5        |  10.126.86.128 | 255.255.255.192 |  10.126.82.4  |
+|       1        |     0.0.0.0    |     0.0.0.0     |  10.126.82.3  |
+
+# 6. Subnet Address Process
 
 ![IPV4_Mapping.svg](IPV4_Mapping.svg)

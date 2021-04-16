@@ -28,7 +28,7 @@ interface GigabitEthernet7/1
 interface GigabitEthernet8/1
 !
 interface GigabitEthernet9/1
- switchport access vlan 320
+ switchport mode access
 !
 interface Vlan1
  no ip address
