@@ -84,14 +84,14 @@ interface FastEthernet0/0.4
 !
 interface FastEthernet0/0.5
  encapsulation dot1Q 318
- ip address 10.128.83.1 255.255.255.128
+ ip address 10.126.83.1 255.255.255.128
 !
 interface FastEthernet0/0.6
  encapsulation dot1Q 319
  ip address 10.126.87.33 255.255.255.224
 !
 interface FastEthernet0/1
- no ip address
+ ip address 120.57.201.202 255.255.255.252
  duplex auto
  speed auto
 !
@@ -102,7 +102,6 @@ interface Vlan1
 router rip
 !
 ip classless
-ip default-network 120.57.201.201
 ip route 0.0.0.0 0.0.0.0 120.57.201.201 
 !
 ip flow-export version 9
