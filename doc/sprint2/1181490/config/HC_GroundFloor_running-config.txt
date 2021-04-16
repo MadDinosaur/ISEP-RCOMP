@@ -22,6 +22,8 @@ interface GigabitEthernet1/1
 !
 interface GigabitEthernet5/1
  switchport access vlan 334
+ switchport mode access
+ switchport voice vlan 334
 !
 interface GigabitEthernet6/1
  switchport mode trunk
