@@ -56,8 +56,12 @@ interface FastEthernet0/0.4
  ip address 10.126.81.1 255.255.255.0
 !
 interface FastEthernet0/0.5
- encapsulation dot1Q 340
+ encapsulation dot1Q 334
  ip address 10.126.86.129 255.255.255.192
+!
+interface FastEthernet0/0.6
+ encapsulation dot1Q 340
+ ip address 10.126.82.4 255.255.255.128
 !
 interface FastEthernet0/1
  no ip address
@@ -78,8 +82,8 @@ ip route 10.126.86.0 255.255.255.192 10.126.82.2
 ip route 10.126.82.128 255.255.255.128 10.126.82.1 
 ip route 10.126.83.128 255.255.255.128 10.126.82.1 
 ip route 10.126.84.0 255.255.255.128 10.126.82.1 
-ip route 10.126.86.192 255.255.255.255 10.126.82.1 
-ip route 10.126.87.64 255.255.255.255 10.126.82.1 
+ip route 10.126.86.192 255.255.255.192 10.126.82.1 
+ip route 10.126.87.64 255.255.255.240 10.126.82.1 
 ip route 0.0.0.0 0.0.0.0 10.126.82.3 
 !
 ip flow-export version 9
