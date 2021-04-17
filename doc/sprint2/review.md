@@ -1,35 +1,31 @@
-RCOMP 2019-2020 Project - Sprint 2 review
+RCOMP 2020-2021 Project - Sprint 2 review
 =========================================
-### Sprint master: 2222222 ###
-(This file is to be created/edited by the sprint master only)
+### Sprint master: 1191430 ###
+
 # 1. Sprint's backlog #
-(Copy here a summary of the provided sprint's backlog, the same text as for the Planning Meeting)
+|Task|Task Description|
+|---------|-----------|
+|T.2.1    |Development of a layer two and layer three Packet Tracer simulation for building 1, and also encompassing the campus backbone.Integration of every members’ Packet Tracer simulations into a single simulation.|
+|T.2.2    |Development of a layer two and layer three Packet Tracer simulation for building 2, and also encompassing the campus backbone.|
+|T.2.3    |Development of a layer two and layer three Packet Tracer simulation for building 3, and also encompassing the campus backbone.|
+|T.2.5    |Development of a layer two and layer three Packet Tracer simulation for building 5, and also encompassing the campus backbone.|
+
 # 2. Subtasks assessment #
-One by one, each team member presents his/her outcomes to the team, the team assesses 		the accomplishment of the subtask backlog.
-The subtask backlog accomplishment can be assessed as one of:
 
-  * Totally implemented with no issues
-  * Totally implemented with issues
-  * Partially implemented with no issues
-  * Partially implemented with issues
+## T.2.1. - 1191507 ##
 
-For the last three cases, a text description of what has not been implemented and present issues must be added.
-Unimplemented features and issues solving is assigned to the same member on the next sprint.
-
-(Examples)
-## 2.1. 1111111 - Structured cable design for building A, floors 2 and 3 #
 ### Totally implemented with no issues. ###
-## 2.2. 2222222 - Structured cable design for building B, floors 0 and 1 #
-### Totally implemented with issues. ###
-The number of outlets in room X is incorrect.
-A better solution for the cable pathways between the floor 1 		distributer and rooms Z and Y should be found.
-## 2.3. 3333333 - VLAN devices configuration for building C #
-### Partially implemented with no issues. ###
-The VLAN CCCC with VLANID 400 has not been implemented.
-The VTP configuration is not present in switch DD.
-## 2.4. 4444444 - IPv4 addressing and routing configurations for building D #
-### Partially implemented with issues. ###
-The IPv4 network TTT has not been implemented.
-The routing table at router FF has the wrong mask for network YYY.
-Nodes on network CCC are not receiving the default-gateway by DHCP.
 
+Obs.: The routing of the ISP could be improved. In the next sprint, an alternative that does not forward to the main building server will be researched.
+
+## T.2.2. - 1191430 ##
+
+### Totally implemented with issues. ###
+
+## T.2.3. - 1190693 ##
+
+### Totally implemented with no issues. ###
+
+## T.2.4. - 1181490 ##
+
+### Totally implemented with issues. ###
