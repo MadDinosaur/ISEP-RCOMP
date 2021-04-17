@@ -14,55 +14,26 @@ hostname Switch
 spanning-tree mode pvst
 spanning-tree extend system-id
 !
-interface FastEthernet0/1
- switchport mode trunk
+interface GigabitEthernet0/1
 !
-interface FastEthernet0/2
+interface GigabitEthernet1/1
  switchport access vlan 316
 !
-interface FastEthernet0/3
+interface GigabitEthernet2/1
 !
-interface FastEthernet0/4
+interface GigabitEthernet3/1
 !
-interface FastEthernet0/5
+interface GigabitEthernet4/1
 !
-interface FastEthernet0/6
+interface GigabitEthernet5/1
 !
-interface FastEthernet0/7
+interface GigabitEthernet6/1
 !
-interface FastEthernet0/8
+interface GigabitEthernet7/1
 !
-interface FastEthernet0/9
+interface GigabitEthernet8/1
 !
-interface FastEthernet0/10
-!
-interface FastEthernet0/11
-!
-interface FastEthernet0/12
-!
-interface FastEthernet0/13
-!
-interface FastEthernet0/14
-!
-interface FastEthernet0/15
-!
-interface FastEthernet0/16
-!
-interface FastEthernet0/17
-!
-interface FastEthernet0/18
-!
-interface FastEthernet0/19
-!
-interface FastEthernet0/20
-!
-interface FastEthernet0/21
-!
-interface FastEthernet0/22
-!
-interface FastEthernet0/23
-!
-interface FastEthernet0/24
+interface GigabitEthernet9/1
 !
 interface Vlan1
  no ip address
