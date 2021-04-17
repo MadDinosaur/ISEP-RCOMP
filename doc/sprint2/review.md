@@ -16,7 +16,7 @@ RCOMP 2020-2021 Project - Sprint 2 review
 
 ### Totally implemented with no issues. ###
 
-Obs.: The routing of the ISP could be improved. In the next sprint, an alternative that does not forward to the main building server will be researched.
+Obs.: The routing of the ISP could be improved since any PING to an outside IP address will fail. In the next sprint, an alternative will be studied.
 
 ## T.2.2. - 1191430 ##
 
