@@ -5,6 +5,8 @@ RCOMP 2020-2021 Project - Sprint 2 - Member 1101507 folder
 
 Despite the number of end devices that building 1 is equipped to support, in order to keep the simulation concise and easy to read, each room that has outlets is represented by only one end device (PC).
 
+In this sprint, redundancy up to HC was implemented. This is an improvement on the previous sprint, since it was not included in the stuctured cabling project for building 1.
+
 The number of ports in each switch are not representative of the number of ports on the physical equipment considered in the structured cabling project from sprint 1. Each switch has only the sufficient number of ports for the simulation to be functional.
 
 The IP-Phone was connected to the ground floor HC since it is the closest point to the reception desk on room 10.3, where presumably a telephone line will be needed. The Server can be placed in the datacentre (room 11.1) and for that reason was connected to the building IC.
@@ -84,7 +86,9 @@ Wireless and phone end devices' IP addresses are represented in this document bu
 
 ---
 ## Routing Table
+<br>
 
+### Building 1 Router
 |    Building    |    Network     |      Mask       |    Next Hop   |     
 |:--------------:|:--------------:|:---------------:|:-------------:|
 |2 | 10.126.82.128 | 255.255.255.128 | 10.126.82.1 | 
@@ -103,3 +107,15 @@ Wireless and phone end devices' IP addresses are represented in this document bu
 |5 | 10.126.86.64  | 255.255.255.192 | 10.126.82.4 |
 |5 | 10.126.86.128 | 255.255.255.192 | 10.126.82.4 |
 |Internet | 0.0.0.0 | 0.0.0.0 | 120.57.201.201 |
+<br>
+
+### ISP Router
+|    Network     |      Mask       |    Next Hop   |     
+|:--------------:|:---------------:|:-------------:|
+| 10.126.80.0 | 255.255.240.0 | 120.57.201.202 |  
+
+**OBS:** Since the ISP Router is "fake", it does not forward packets with a destination IP address that belongs to any device outside of the campus.
+
+The static routing table was configured, however, to forward eventual matching traffic from outside the campus into the infrastructure, by forwarding it to the building 1 router.
+
+Additionally, network aggregation was used to simplify the routing table above.
