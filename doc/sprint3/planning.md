@@ -15,12 +15,16 @@ Update the campus.pkt layer three Packet Tracer simulation from the previous spr
 
 -   VoIP service
 
-    |Building|Number|
-    |:------:|:----:|
-    |    1   | 111111111|
-    |    2   | 222222222|
-    |    3   | 333333333|
-    |    5   | 555555555|
+    |Building|Number   |Phone Number   |
+    |:------:|:-------:|:-------:|
+    |    1   |   1     |111111111|
+    |    1   |   2     |222222222|
+    |    2   |   1     |333333333|
+    |    2   |   2     |444444444|
+    |    3   |   1     |555555555|
+    |    3   |   2     |666666666|
+    |    5   |    1    |777777777|
+    |    5   |    1    |888888888|
     
 -   Adding a second server to each DMZ network to run the HTTP service.
 
