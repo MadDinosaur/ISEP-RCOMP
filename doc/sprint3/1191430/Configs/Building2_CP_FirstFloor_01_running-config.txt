@@ -21,6 +21,8 @@ interface GigabitEthernet8/1
 !
 interface GigabitEthernet9/1
  switchport access vlan 324
+ switchport mode access
+ switchport voice vlan 324
 !
 interface Vlan1
  no ip address

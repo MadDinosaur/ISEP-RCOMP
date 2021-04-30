@@ -9,30 +9,39 @@ hostname Router
 !
 !
 !
+ip dhcp excluded-address 10.126.87.66
+ip dhcp excluded-address 10.126.82.1
+ip dhcp excluded-address 10.126.84.1
+ip dhcp excluded-address 10.126.83.129
+ip dhcp excluded-address 10.126.82.129
+ip dhcp excluded-address 10.126.87.65
+ip dhcp excluded-address 10.126.86.193
+ip dhcp excluded-address 10.126.87.68
 !
 ip dhcp pool NETWORKBUILDING2WIFI
  network 10.126.82.128 255.255.255.128
- default-router 10.126.82.1
+ default-router 10.126.82.5
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2FIRSTFLOOR
  network 10.126.83.128 255.255.255.128
- default-router 10.126.82.1
+ default-router 10.126.82.5
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2GROUNDFLOOR
  network 10.126.84.0 255.255.255.192
- default-router 10.126.82.1
+ default-router 10.126.82.5
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2VOIP
  network 10.126.86.192 255.255.255.192
- default-router 10.126.82.1
+ default-router 10.126.82.5
+ option 150 ip 10.126.86.192
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2DMZ
  network 10.126.87.64 255.255.255.240
- default-router 10.126.82.1
+ default-router 10.126.82.5
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 !
@@ -66,7 +75,7 @@ interface FastEthernet0/0
 !
 interface FastEthernet0/0.1
  encapsulation dot1Q 340
- ip address 10.126.82.1 255.255.255.128
+ ip address 10.126.82.5 255.255.255.128
 !
 interface FastEthernet0/0.2
  encapsulation dot1Q 320
@@ -101,7 +110,6 @@ interface Vlan1
 router rip
 !
 ip classless
-ip route 0.0.0.0 0.0.0.0 10.126.82.5 
 !
 ip flow-export version 9
 !
@@ -111,6 +119,29 @@ ip flow-export version 9
 !
 !
 !
+!
+telephony-service
+ no auto-reg-ephone
+ max-ephones 2
+ max-dn 2
+ ip source-address 10.126.86.193 port 2000
+ auto assign 1 to 2
+!
+ephone-dn 1
+ number 1010
+!
+ephone-dn 2
+ number 1020
+!
+ephone 1
+ device-security-mode none
+ mac-address 0030.A35B.082E
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 0060.7032.50A4
+ button 1:2
 !
 line con 0
 !
