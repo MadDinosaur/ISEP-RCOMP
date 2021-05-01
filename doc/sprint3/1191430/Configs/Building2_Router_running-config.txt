@@ -35,7 +35,7 @@ ip dhcp pool NETWORKBUILDING2GROUNDFLOOR
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2VOIP
  network 10.126.86.192 255.255.255.192
- default-router 10.126.82.1
+ default-router 10.126.86.193
  option 150 ip 10.126.86.193
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
@@ -114,6 +114,7 @@ router ospf 2021
  network 10.126.84.0 0.0.0.63 area 2
  network 10.126.86.192 0.0.0.63 area 2
  network 10.126.87.64 0.0.0.15 area 2
+ network 10.126.82.0 0.0.0.127 area 0
 !
 router rip
 !
@@ -140,6 +141,18 @@ ephone-dn 1
 !
 ephone-dn 2
  number 1020
+!
+ephone 1
+ device-security-mode none
+ mac-address 0060.7032.50A4
+ type 7960
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 0030.A35B.082E
+ type 7960
+ button 1:2
 !
 line con 0
 !
