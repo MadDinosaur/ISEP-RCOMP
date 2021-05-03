@@ -20,17 +20,17 @@ ip dhcp excluded-address 10.126.87.68
 !
 ip dhcp pool NETWORKBUILDING2WIFI
  network 10.126.82.128 255.255.255.128
- default-router 10.126.82.1
+ default-router 10.126.82.129
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2FIRSTFLOOR
  network 10.126.83.128 255.255.255.128
- default-router 10.126.82.1
+ default-router 10.126.83.129
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2GROUNDFLOOR
  network 10.126.84.0 255.255.255.192
- default-router 10.126.82.1
+ default-router 10.126.84.1
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2VOIP
@@ -41,7 +41,7 @@ ip dhcp pool NETWORKBUILDING2VOIP
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2DMZ
  network 10.126.87.64 255.255.255.240
- default-router 10.126.82.1
+ default-router 10.126.87.65
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 !
