@@ -40,9 +40,9 @@ Update the campus.pkt layer three Packet Tracer simulation from the previous spr
     |Building|IPv4|DNS Domain|DNS Name Server|
     |:------:|:--:|:--------:|:-------------:|
     | 1 | 10.126.83.2| rcomp-20-21-dl-g1 | ns.rcomp-20-21-dl-g1 |
-    | 2 | 10.126.87.66  | building-2.rcomp-20-21-dl-g6 | ns.building-2.rcomp-20-21-dl-g1 |
-    | 3 | 10.126.80.2 | building-3.rcomp-20-21-dl-g6 | ns.building3.rcomp-20-21-dl-g6 |
-    | 5 | 10.126.81.2 |  building-5.rcomp-20-21-dl-g6|ns.building5.rcomp-20-21-dl-g6 |
+    | 2 | 10.126.87.66  | building-2.rcomp-20-21-dl-g1 | ns.building-2.rcomp-20-21-dl-g1 |
+    | 3 | 10.126.80.2 | building-3.rcomp-20-21-dl-g1 | ns.building3.rcomp-20-21-dl-g1 |
+    | 5 | 10.126.81.2 |  building-5.rcomp-20-21-dl-g1|ns.building5.rcomp-20-21-dl-g1 |
 
 
 -   Enforcing NAT (Network Address Translation).
