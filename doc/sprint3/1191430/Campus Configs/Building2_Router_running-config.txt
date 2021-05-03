@@ -9,30 +9,39 @@ hostname Router
 !
 !
 !
+ip dhcp excluded-address 10.126.87.66
+ip dhcp excluded-address 10.126.82.1
+ip dhcp excluded-address 10.126.84.1
+ip dhcp excluded-address 10.126.83.129
+ip dhcp excluded-address 10.126.82.129
+ip dhcp excluded-address 10.126.87.65
+ip dhcp excluded-address 10.126.86.193
+ip dhcp excluded-address 10.126.87.68
 !
 ip dhcp pool NETWORKBUILDING2WIFI
  network 10.126.82.128 255.255.255.128
- default-router 10.126.82.1
+ default-router 10.126.82.129
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2FIRSTFLOOR
  network 10.126.83.128 255.255.255.128
- default-router 10.126.82.1
+ default-router 10.126.83.129
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2GROUNDFLOOR
  network 10.126.84.0 255.255.255.192
- default-router 10.126.82.1
+ default-router 10.126.84.1
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2VOIP
  network 10.126.86.192 255.255.255.192
- default-router 10.126.82.1
+ default-router 10.126.86.193
+ option 150 ip 10.126.86.193
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING2DMZ
  network 10.126.87.64 255.255.255.240
- default-router 10.126.82.1
+ default-router 10.126.87.65
  dns-server 10.126.87.66
  domain-name building-2.rcomp-20-21-dl-g1
 !
@@ -98,8 +107,19 @@ interface Vlan1
  no ip address
  shutdown
 !
+router ospf 2021
+ log-adjacency-changes
+ network 10.126.82.128 0.0.0.127 area 2
+ network 10.126.83.128 0.0.0.127 area 2
+ network 10.126.84.0 0.0.0.63 area 2
+ network 10.126.86.192 0.0.0.63 area 2
+ network 10.126.87.64 0.0.0.15 area 2
+ network 10.126.82.0 0.0.0.127 area 0
+!
 router rip
 !
+ip nat inside source static 10.126.87.68 120.57.201.201 
+ip nat outside source static 120.57.201.201 10.126.87.68 
 ip classless
 ip route 0.0.0.0 0.0.0.0 10.126.82.5 
 !
@@ -111,6 +131,30 @@ ip flow-export version 9
 !
 !
 !
+!
+telephony-service
+ max-ephones 2
+ max-dn 2
+ ip source-address 10.126.86.193 port 2000
+ auto assign 1 to 2
+!
+ephone-dn 1
+ number 1010
+!
+ephone-dn 2
+ number 1020
+!
+ephone 1
+ device-security-mode none
+ mac-address 00E0.8F3E.C067
+ type 7960
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 0090.21CD.DE8B
+ type 7960
+ button 1:2
 !
 line con 0
 !
