@@ -19,16 +19,24 @@ ip dhcp excluded-address 10.126.82.2
 ip dhcp pool Building3_GroundFloor
  network 10.126.85.192 255.255.255.192
  default-router 10.126.82.2
+ dns-server 10.126.80.2
+ domain-name building-3.rcomp-20-21-dl-g1
 ip dhcp pool Building3_FirstFloor
  network 10.126.85.0 255.255.255.192
  default-router 10.126.82.2
+ dns-server 10.126.80.2
+ domain-name building-3.rcomp-20-21-dl-g1
 ip dhcp pool Building3_WiFi
  network 10.126.84.64 255.255.255.192
  default-router 10.126.82.2
+ dns-server 10.126.80.2
+ domain-name building-3.rcomp-20-21-dl-g1
 ip dhcp pool Building3_VoIP
  network 10.126.86.0 255.255.255.192
  default-router 10.126.82.2
  option 150 ip 10.126.86.1
+ dns-server 10.126.80.2
+ domain-name building-3.rcomp-20-21-dl-g1
 !
 !
 !
