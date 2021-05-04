@@ -81,6 +81,7 @@ interface FastEthernet0/0.3
 interface FastEthernet0/0.4
  encapsulation dot1Q 328
  ip address 10.126.80.1 255.255.255.0
+ ip nat inside
 !
 interface FastEthernet0/0.5
  encapsulation dot1Q 329
@@ -89,6 +90,7 @@ interface FastEthernet0/0.5
 interface FastEthernet0/0.6
  encapsulation dot1Q 340
  ip address 10.126.82.2 255.255.255.128
+ ip nat outside
 !
 interface FastEthernet0/1
  no ip address
@@ -111,6 +113,10 @@ router ospf 2021
 !
 router rip
 !
+ip nat inside source static tcp 10.126.80.3 80 10.126.82.2 80 
+ip nat inside source static tcp 10.126.80.3 443 10.126.82.2 443 
+ip nat inside source static tcp 10.126.80.2 53 10.126.82.2 53 
+ip nat inside source static udp 10.126.80.2 53 10.126.82.2 53 
 ip classless
 !
 ip flow-export version 9
