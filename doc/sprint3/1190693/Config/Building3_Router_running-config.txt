@@ -69,14 +69,17 @@ interface FastEthernet0/0
 interface FastEthernet0/0.1
  encapsulation dot1Q 325
  ip address 10.126.85.193 255.255.255.192
+ ip access-group 51 in
 !
 interface FastEthernet0/0.2
  encapsulation dot1Q 326
  ip address 10.126.85.1 255.255.255.192
+ ip access-group 52 in
 !
 interface FastEthernet0/0.3
  encapsulation dot1Q 327
  ip address 10.126.84.65 255.255.255.192
+ ip access-group 53 in
 !
 interface FastEthernet0/0.4
  encapsulation dot1Q 328
@@ -86,10 +89,12 @@ interface FastEthernet0/0.4
 interface FastEthernet0/0.5
  encapsulation dot1Q 329
  ip address 10.126.86.1 255.255.255.192
+ ip access-group 54 in
 !
 interface FastEthernet0/0.6
  encapsulation dot1Q 340
  ip address 10.126.82.2 255.255.255.128
+ ip access-group 55 in
  ip nat outside
 !
 interface FastEthernet0/1
@@ -122,6 +127,14 @@ ip classless
 ip flow-export version 9
 !
 !
+access-list 52 permit 10.126.85.0 0.0.0.63
+access-list 53 permit 10.126.84.64 0.0.0.63
+access-list 54 permit 10.126.86.0 0.0.0.63
+access-list 51 permit 10.126.85.192 0.0.0.63
+access-list 55 deny 10.126.85.192 0.0.0.63
+access-list 55 deny 10.126.85.0 0.0.0.63
+access-list 55 deny 10.126.84.64 0.0.0.63
+access-list 55 permit any
 !
 !
 !
