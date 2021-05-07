@@ -76,26 +76,33 @@ interface FastEthernet0/0
 interface FastEthernet0/0.1
  encapsulation dot1Q 340
  ip address 10.126.82.1 255.255.255.128
+ ip access-group 35 in
+ ip nat outside
 !
 interface FastEthernet0/0.2
  encapsulation dot1Q 320
  ip address 10.126.84.1 255.255.255.192
+ ip access-group 30 in
 !
 interface FastEthernet0/0.3
  encapsulation dot1Q 321
  ip address 10.126.83.129 255.255.255.128
+ ip access-group 31 in
 !
 interface FastEthernet0/0.4
  encapsulation dot1Q 322
  ip address 10.126.82.129 255.255.255.128
+ ip access-group 32 in
 !
 interface FastEthernet0/0.5
  encapsulation dot1Q 323
  ip address 10.126.87.65 255.255.255.240
+ ip nat inside
 !
 interface FastEthernet0/0.6
  encapsulation dot1Q 324
  ip address 10.126.86.193 255.255.255.192
+ ip access-group 33 in
 !
 interface FastEthernet0/1
  no ip address
@@ -118,39 +125,53 @@ router ospf 2021
 !
 router rip
 !
+ip nat inside source static tcp 10.126.87.68 80 10.126.82.1 80
+ip nat inside source static tcp 10.126.87.68 443 10.126.82.1 443
+ip nat inside source static tcp 10.126.87.66 53 10.126.82.1 53
+ip nat inside source static udp 10.126.87.66 53 10.126.82.1 53
 ip classless
 ip route 0.0.0.0 0.0.0.0 10.126.82.5 
 !
 ip flow-export version 9
 !
 !
+access-list 30 permit 10.126.84.0 0.0.0.63
+access-list 31 permit 10.126.83.128 0.0.0.127
+access-list 32 permit 10.126.82.128 0.0.0.127
+access-list 33 permit 10.126.86.192 0.0.0.63
+access-list 35 deny 10.126.84.0 0.0.0.63
+access-list 35 deny 10.126.83.128 0.0.0.127
+access-list 35 deny 10.126.82.128 0.0.0.127
+access-list 35 deny 10.126.86.192 0.0.0.63
+access-list 35 deny 10.126.87.64 0.0.0.127
+access-list 35 permit any
 !
 !
 !
 !
 !
 !
-dial-peer voice 1 voip
+dial-peer voice 7 voip
  destination-pattern 1........
  session target ipv4:10.126.82.3
 !
-dial-peer voice 2 voip
+dial-peer voice 8 voip
  destination-pattern 2........
  session target ipv4:10.126.82.3
 !
-dial-peer voice 3 voip
+dial-peer voice 9 voip
  destination-pattern 5........
  session target ipv4:10.126.82.2
 !
-dial-peer voice 4 voip
+dial-peer voice 10 voip
  destination-pattern 6........
  session target ipv4:10.126.82.2
 !
-dial-peer voice 5 voip
+dial-peer voice 11 voip
  destination-pattern 7........
  session target ipv4:10.126.82.4
 !
-dial-peer voice 6 voip
+dial-peer voice 12 voip
  destination-pattern 8........
  session target ipv4:10.126.82.4
 !
