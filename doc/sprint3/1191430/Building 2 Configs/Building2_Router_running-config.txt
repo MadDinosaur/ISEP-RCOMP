@@ -130,6 +130,30 @@ ip flow-export version 9
 !
 !
 !
+dial-peer voice 1 voip
+ destination-pattern 1........
+ session target ipv4:10.126.82.3
+!
+dial-peer voice 2 voip
+ destination-pattern 2........
+ session target ipv4:10.126.82.3
+!
+dial-peer voice 3 voip
+ destination-pattern 5........
+ session target ipv4:10.126.82.2
+!
+dial-peer voice 4 voip
+ destination-pattern 6........
+ session target ipv4:10.126.82.2
+!
+dial-peer voice 5 voip
+ destination-pattern 7........
+ session target ipv4:10.126.82.4
+!
+dial-peer voice 6 voip
+ destination-pattern 8........
+ session target ipv4:10.126.82.4
+!
 telephony-service
  max-ephones 2
  max-dn 2
@@ -137,10 +161,10 @@ telephony-service
  auto assign 1 to 2
 !
 ephone-dn 1
- number 1010
+ number 333333333
 !
 ephone-dn 2
- number 1020
+ number 444444444
 !
 ephone 1
  device-security-mode none
