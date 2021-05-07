@@ -81,28 +81,34 @@ interface FastEthernet0/0
 interface FastEthernet0/0.1
  encapsulation dot1Q 340
  ip address 10.126.82.3 255.255.255.128
+ ip access-group 105 in
  ip nat outside
 !
 interface FastEthernet0/0.2
  encapsulation dot1Q 315
  ip address 10.126.85.65 255.255.255.192
+ ip access-group 100 in
 !
 interface FastEthernet0/0.3
  encapsulation dot1Q 316
  ip address 10.126.85.129 255.255.255.192
+ ip access-group 101 in
 !
 interface FastEthernet0/0.4
  encapsulation dot1Q 317
  ip address 10.126.87.1 255.255.255.224
+ ip access-group 102 in
 !
 interface FastEthernet0/0.5
  encapsulation dot1Q 318
  ip address 10.126.83.1 255.255.255.128
+ ip access-group 103 in
  ip nat inside
 !
 interface FastEthernet0/0.6
  encapsulation dot1Q 319
  ip address 10.126.87.33 255.255.255.224
+ ip access-group 104 in
 !
 interface FastEthernet0/1
  no ip address
@@ -135,6 +141,41 @@ ip route 0.0.0.0 0.0.0.0 10.126.82.5
 ip flow-export version 9
 !
 !
+access-list 100 permit ip 10.126.85.64 0.0.0.63 any
+access-list 100 permit icmp any any
+access-list 100 permit udp any any eq bootpc
+access-list 100 permit udp any any eq bootps
+access-list 100 permit udp any any eq tftp
+access-list 101 permit ip 10.126.85.128 0.0.0.63 any
+access-list 101 permit icmp any any
+access-list 101 permit udp any any eq bootpc
+access-list 101 permit udp any any eq bootps
+access-list 101 permit udp any any eq tftp
+access-list 102 permit ip 10.126.87.0 0.0.0.31 any
+access-list 102 permit icmp any any
+access-list 102 permit udp any any eq bootpc
+access-list 102 permit udp any any eq bootps
+access-list 102 permit udp any any eq tftp
+access-list 103 permit icmp any any
+access-list 103 permit tcp any host 10.126.83.2 eq 53
+access-list 103 permit udp any host 10.126.83.2 eq 53
+access-list 103 permit tcp any host 10.126.83.3 eq 80
+access-list 103 permit tcp any host 10.126.83.3 eq 443
+access-list 103 permit ip any 10.126.83.0 0.0.0.127
+access-list 103 permit udp any any eq bootpc
+access-list 103 permit udp any any eq bootps
+access-list 103 permit udp any any eq tftp
+access-list 104 permit ip 10.126.87.32 0.0.0.31 any
+access-list 104 permit icmp any any
+access-list 104 permit udp any any eq bootpc
+access-list 104 permit udp any any eq bootps
+access-list 104 permit udp any any eq tftp
+access-list 105 deny 10.126.85.128 0.0.0.63 any
+access-list 105 deny 10.126.87.0 0.0.0.31 any
+access-list 105 deny 10.126.85.64 0.0.0.63 any
+access-list 105 deny 10.126.83.0 0.0.0.127 any
+access-list 105 deny 10.126.87.32 0.0.0.31 any
+access-list 105 permit ospf any any
 !
 !
 !

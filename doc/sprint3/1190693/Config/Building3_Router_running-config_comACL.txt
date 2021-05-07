@@ -90,6 +90,8 @@ interface FastEthernet0/0.5
 interface FastEthernet0/0.6
  encapsulation dot1Q 340
  ip address 10.126.82.2 255.255.255.128
+ ip access-group 55 in
+ ip access-group 51 out
  ip nat outside
 !
 interface FastEthernet0/1
@@ -122,15 +124,19 @@ ip classless
 ip flow-export version 9
 !
 !
+access-list 51 permit 10.126.85.0 0.0.0.63
+access-list 51 permit 10.126.84.64 0.0.0.63
+access-list 51 permit 10.126.86.0 0.0.0.63
+access-list 51 permit 10.126.85.192 0.0.0.63
+access-list 55 deny 10.126.85.192 0.0.0.63
+access-list 55 deny 10.126.85.0 0.0.0.63
+access-list 55 deny 10.126.84.64 0.0.0.63
+access-list 55 permit any
 !
 !
 !
 !
 !
-!
-dial-peer voice 13 voip
- destination-pattern 1........
- session target ipv4:10.126.82.3
 !
 dial-peer voice 14 voip
  destination-pattern 2........
