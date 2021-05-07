@@ -9,34 +9,7 @@ hostname Router
 !
 !
 !
-ip dhcp excluded-address 10.126.85.65
-ip dhcp excluded-address 10.126.85.129
-ip dhcp excluded-address 10.126.87.1
-ip dhcp excluded-address 10.126.83.1
-ip dhcp excluded-address 10.126.87.33
-ip dhcp excluded-address 10.126.82.3
-ip dhcp excluded-address 10.126.82.2
-ip dhcp excluded-address 10.126.82.1
-ip dhcp excluded-address 10.126.82.4
 !
-ip dhcp pool NETWORK1
- network 10.126.85.64 255.255.255.192
- default-router 10.126.85.65
-ip dhcp pool NETWORK2
- network 10.126.85.128 255.255.255.192
- default-router 10.126.85.129
-ip dhcp pool NETWORK3
- network 10.126.87.0 255.255.255.224
- default-router 10.126.87.1
-ip dhcp pool NETWORK4
- network 10.126.83.0 255.255.255.128
- default-router 10.126.83.1
-ip dhcp pool NETWORK5
- network 10.126.87.32 255.255.255.224
- default-router 10.126.87.33
-ip dhcp pool NETWORK6
- network 10.126.82.0 255.255.255.128
- default-router 10.126.82.3
 !
 !
 !
@@ -62,33 +35,9 @@ spanning-tree mode pvst
 !
 !
 interface FastEthernet0/0
- no ip address
+ ip address 10.126.82.5 255.255.255.128
  duplex auto
  speed auto
-!
-interface FastEthernet0/0.1
- encapsulation dot1Q 340
- ip address 10.126.82.5 255.255.255.128
-!
-interface FastEthernet0/0.2
- encapsulation dot1Q 315
- ip address 10.126.85.65 255.255.255.192
-!
-interface FastEthernet0/0.3
- encapsulation dot1Q 316
- ip address 10.126.85.129 255.255.255.192
-!
-interface FastEthernet0/0.4
- encapsulation dot1Q 317
- ip address 10.126.87.1 255.255.255.224
-!
-interface FastEthernet0/0.5
- encapsulation dot1Q 318
- ip address 10.126.83.1 255.255.255.128
-!
-interface FastEthernet0/0.6
- encapsulation dot1Q 319
- ip address 10.126.87.33 255.255.255.224
 !
 interface FastEthernet0/1
  ip address 120.57.201.202 255.255.255.252
@@ -99,36 +48,41 @@ interface Vlan1
  no ip address
  shutdown
 !
+router ospf 2021
+ log-adjacency-changes
+ network 10.126.82.0 0.0.0.127 area 0
+ network 10.126.85.64 0.0.0.63 area 1
+ network 10.126.85.128 0.0.0.63 area 1
+ network 10.126.87.0 0.0.0.31 area 1
+ network 10.126.83.0 0.0.0.127 area 1
+ network 10.126.87.32 0.0.0.31 area 1
+ network 10.126.84.0 0.0.0.63 area 2
+ network 10.126.83.128 0.0.0.127 area 2
+ network 10.126.82.128 0.0.0.127 area 2
+ network 10.126.87.64 0.0.0.15 area 2
+ network 10.126.86.192 0.0.0.63 area 2
+ network 10.126.85.192 0.0.0.63 area 3
+ network 10.126.85.0 0.0.0.63 area 3
+ network 10.126.84.64 0.0.0.63 area 3
+ network 10.126.80.0 0.0.0.255 area 3
+ network 10.126.86.64 0.0.0.63 area 5
+ network 10.126.84.192 0.0.0.63 area 5
+ network 10.126.84.128 0.0.0.63 area 5
+ network 10.126.81.0 0.0.0.255 area 5
+ network 10.126.86.128 0.0.0.63 area 5
+ default-information originate
+!
 router rip
 !
 ip classless
-ip route 10.126.82.128 255.255.255.128 10.126.82.1 
-ip route 10.126.83.128 255.255.255.128 10.126.82.1 
-ip route 10.126.84.0 255.255.255.128 10.126.82.1 
-ip route 10.126.86.192 255.255.255.255 10.126.82.1 
-ip route 10.126.87.64 255.255.255.255 10.126.82.1 
-ip route 10.126.80.0 255.255.255.0 10.126.82.2 
-ip route 10.126.84.64 255.255.255.192 10.126.82.2 
-ip route 10.126.85.0 255.255.255.192 10.126.82.2 
-ip route 10.126.85.192 255.255.255.192 10.126.82.2 
-ip route 10.126.86.0 255.255.255.192 10.126.82.2 
-ip route 10.126.81.0 255.255.255.0 10.126.82.4 
-ip route 10.126.84.128 255.255.255.192 10.126.82.4 
-ip route 10.126.84.192 255.255.255.192 10.126.82.4 
-ip route 10.126.86.64 255.255.255.192 10.126.82.4 
-ip route 10.126.86.128 255.255.255.192 10.126.82.4 
 ip route 0.0.0.0 0.0.0.0 120.57.201.201 
-ip route 10.126.86.192 255.255.255.192 10.126.82.1 
-ip route 10.126.87.64 255.255.255.240 10.126.82.1 
-ip route 10.126.85.64 255.255.255.192 10.126.82.3 
-ip route 10.126.85.128 255.255.255.192 10.126.82.3 
-ip route 10.126.87.0 255.255.255.224 10.126.82.3 
-ip route 10.126.83.0 255.255.255.128 10.126.82.3 
-ip route 10.126.87.32 255.255.255.224 10.126.82.3 
 !
 ip flow-export version 9
 !
 !
+access-list 1 permit 10.126.82.0 0.0.0.127
+access-list 2 deny 10.126.82.0 0.0.0.127
+access-list 2 permit any
 !
 !
 !
