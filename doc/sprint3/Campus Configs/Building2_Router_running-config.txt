@@ -125,16 +125,26 @@ router ospf 2021
 !
 router rip
 !
-ip nat inside source static tcp 10.126.87.68 80 10.126.82.1 80 
-ip nat inside source static tcp 10.126.87.68 443 10.126.82.1 443 
-ip nat inside source static tcp 10.126.87.66 53 10.126.82.1 53 
-ip nat inside source static udp 10.126.87.66 53 10.126.82.1 53 
+ip nat inside source static tcp 10.126.87.68 80 10.126.82.1 80
+ip nat inside source static tcp 10.126.87.68 443 10.126.82.1 443
+ip nat inside source static tcp 10.126.87.66 53 10.126.82.1 53
+ip nat inside source static udp 10.126.87.66 53 10.126.82.1 53
 ip classless
 ip route 0.0.0.0 0.0.0.0 10.126.82.5 
 !
 ip flow-export version 9
 !
 !
+access-list 30 permit 10.126.84.0 0.0.0.63
+access-list 31 permit 10.126.83.128 0.0.0.127
+access-list 32 permit 10.126.82.128 0.0.0.127
+access-list 33 permit 10.126.86.192 0.0.0.63
+access-list 35 deny 10.126.84.0 0.0.0.63
+access-list 35 deny 10.126.83.128 0.0.0.127
+access-list 35 deny 10.126.82.128 0.0.0.127
+access-list 35 deny 10.126.86.192 0.0.0.63
+access-list 35 deny 10.126.87.64 0.0.0.127
+access-list 35 permit any
 !
 !
 !

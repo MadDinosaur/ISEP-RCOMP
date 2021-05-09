@@ -1,0 +1,238 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+ip dhcp excluded-address 10.126.85.65
+ip dhcp excluded-address 10.126.85.129
+ip dhcp excluded-address 10.126.87.1
+ip dhcp excluded-address 10.126.83.1
+ip dhcp excluded-address 10.126.87.33
+ip dhcp excluded-address 10.126.82.3
+ip dhcp excluded-address 10.126.82.2
+ip dhcp excluded-address 10.126.82.1
+ip dhcp excluded-address 10.126.82.4
+ip dhcp excluded-address 10.126.87.32
+!
+ip dhcp pool NETWORK1
+ network 10.126.85.64 255.255.255.192
+ default-router 10.126.85.65
+ dns-server 10.126.83.2
+ domain-name rcomp-20-21-dl-g1
+ip dhcp pool NETWORK2
+ network 10.126.85.128 255.255.255.192
+ default-router 10.126.85.129
+ dns-server 10.126.83.2
+ domain-name rcomp-20-21-dl-g1
+ip dhcp pool NETWORK3
+ network 10.126.87.0 255.255.255.224
+ default-router 10.126.87.1
+ dns-server 10.126.83.2
+ domain-name rcomp-20-21-dl-g1
+ip dhcp pool NETWORK4
+ network 10.126.83.0 255.255.255.128
+ default-router 10.126.83.1
+ dns-server 10.126.83.2
+ domain-name rcomp-20-21-dl-g1
+ip dhcp pool NETWORK6
+ network 10.126.82.0 255.255.255.128
+ default-router 10.126.82.3
+ dns-server 10.126.83.2
+ domain-name rcomp-20-21-dl-g1
+ip dhcp pool MYVOIP
+ network 10.126.87.32 255.255.255.224
+ default-router 10.126.87.33
+ option 150 ip 10.126.87.33
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.1
+ encapsulation dot1Q 340
+ ip address 10.126.82.3 255.255.255.128
+ ip access-group 105 in
+ ip nat outside
+!
+interface FastEthernet0/0.2
+ encapsulation dot1Q 315
+ ip address 10.126.85.65 255.255.255.192
+ ip access-group 100 in
+!
+interface FastEthernet0/0.3
+ encapsulation dot1Q 316
+ ip address 10.126.85.129 255.255.255.192
+ ip access-group 101 in
+!
+interface FastEthernet0/0.4
+ encapsulation dot1Q 317
+ ip address 10.126.87.1 255.255.255.224
+ ip access-group 102 in
+!
+interface FastEthernet0/0.5
+ encapsulation dot1Q 318
+ ip address 10.126.83.1 255.255.255.128
+ ip access-group 103 in
+ ip nat inside
+!
+interface FastEthernet0/0.6
+ encapsulation dot1Q 319
+ ip address 10.126.87.33 255.255.255.224
+ ip access-group 104 in
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 2021
+ log-adjacency-changes
+ network 10.126.82.0 0.0.0.127 area 0
+ network 10.126.85.64 0.0.0.63 area 1
+ network 10.126.85.128 0.0.0.63 area 1
+ network 10.126.87.0 0.0.0.31 area 1
+ network 10.126.83.0 0.0.0.127 area 1
+ network 10.126.87.32 0.0.0.31 area 1
+!
+router rip
+!
+ip nat inside source static tcp 10.126.83.3 80 10.126.82.3 80 
+ip nat inside source static tcp 10.126.83.3 443 10.126.82.3 443 
+ip nat inside source static tcp 10.126.83.2 53 10.126.82.3 53 
+ip nat inside source static udp 10.126.83.2 53 10.126.82.3 53 
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.126.82.5 
+!
+ip flow-export version 9
+!
+!
+access-list 100 permit ip 10.126.85.64 0.0.0.63 any
+access-list 100 permit icmp any any
+access-list 100 permit udp any any eq bootpc
+access-list 100 permit udp any any eq bootps
+access-list 100 permit udp any any eq tftp
+access-list 101 permit ip 10.126.85.128 0.0.0.63 any
+access-list 101 permit icmp any any
+access-list 101 permit udp any any eq bootpc
+access-list 101 permit udp any any eq bootps
+access-list 101 permit udp any any eq tftp
+access-list 102 permit ip 10.126.87.0 0.0.0.31 any
+access-list 102 permit icmp any any
+access-list 102 permit udp any any eq bootpc
+access-list 102 permit udp any any eq bootps
+access-list 102 permit udp any any eq tftp
+access-list 103 permit icmp any any
+access-list 103 permit udp any host 10.126.83.2 eq domain
+access-list 103 permit tcp any host 10.126.83.3 eq www
+access-list 103 permit tcp any host 10.126.83.3 eq 443
+access-list 103 permit ip any 10.126.83.0 0.0.0.127
+access-list 103 permit udp any any eq bootpc
+access-list 103 permit udp any any eq bootps
+access-list 103 permit udp any any eq tftp
+access-list 103 permit tcp any host 10.126.83.2 eq domain
+access-list 104 permit ip 10.126.87.32 0.0.0.31 any
+access-list 104 permit icmp any any
+access-list 104 permit udp any any eq bootpc
+access-list 104 permit udp any any eq bootps
+access-list 104 permit udp any any eq tftp
+access-list 105 permit ospf any any
+!
+!
+!
+!
+!
+!
+dial-peer voice 1 voip
+ destination-pattern 3........
+ session target ipv4:10.126.82.1
+!
+dial-peer voice 2 voip
+ destination-pattern 4........
+ session target ipv4:10.126.82.1
+!
+dial-peer voice 3 voip
+ destination-pattern 5........
+ session target ipv4:10.126.82.2
+!
+dial-peer voice 4 voip
+ destination-pattern 6........
+ session target ipv4:10.126.82.2
+!
+dial-peer voice 5 voip
+ destination-pattern 7........
+ session target ipv4:10.126.82.4
+!
+dial-peer voice 6 voip
+ destination-pattern 8........
+ session target ipv4:10.126.82.4
+!
+telephony-service
+ max-ephones 2
+ max-dn 2
+ ip source-address 10.126.87.33 port 2000
+ auto assign 1 to 2
+!
+ephone-dn 1
+ number 111111111
+!
+ephone-dn 2
+ number 222222222
+!
+ephone 1
+ device-security-mode none
+ mac-address 0001.970A.0624
+ type 7960
+ button 1:2
+!
+ephone 2
+ device-security-mode none
+ mac-address 0009.7C95.18DC
+ type 7960
+ button 1:1
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

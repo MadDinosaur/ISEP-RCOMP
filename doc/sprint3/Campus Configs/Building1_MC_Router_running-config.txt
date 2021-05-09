@@ -99,6 +99,30 @@ interface Vlan1
  no ip address
  shutdown
 !
+router ospf 2021
+ log-adjacency-changes
+ network 10.126.82.0 0.0.0.127 area 0
+ network 10.126.85.64 0.0.0.63 area 1
+ network 10.126.85.128 0.0.0.63 area 1
+ network 10.126.87.0 0.0.0.31 area 1
+ network 10.126.83.0 0.0.0.127 area 1
+ network 10.126.87.32 0.0.0.31 area 1
+ network 10.126.84.0 0.0.0.63 area 2
+ network 10.126.83.128 0.0.0.127 area 2
+ network 10.126.82.128 0.0.0.127 area 2
+ network 10.126.87.64 0.0.0.15 area 2
+ network 10.126.86.192 0.0.0.63 area 2
+ network 10.126.85.192 0.0.0.63 area 3
+ network 10.126.85.0 0.0.0.63 area 3
+ network 10.126.84.64 0.0.0.63 area 3
+ network 10.126.80.0 0.0.0.255 area 3
+ network 10.126.86.64 0.0.0.63 area 5
+ network 10.126.84.192 0.0.0.63 area 5
+ network 10.126.84.128 0.0.0.63 area 5
+ network 10.126.81.0 0.0.0.255 area 5
+ network 10.126.86.128 0.0.0.63 area 5
+ default-information originate
+!
 router rip
 !
 ip classless
@@ -129,6 +153,9 @@ ip route 10.126.87.32 255.255.255.224 10.126.82.3
 ip flow-export version 9
 !
 !
+access-list 1 permit 10.126.82.0 0.0.0.127
+access-list 2 deny 10.126.82.0 0.0.0.127
+access-list 2 permit any
 !
 !
 !

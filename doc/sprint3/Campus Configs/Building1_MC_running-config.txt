@@ -21,13 +21,12 @@ interface GigabitEthernet1/1
  switchport mode trunk
 !
 interface GigabitEthernet2/1
- switchport access vlan 321
+ switchport mode trunk
 !
 interface GigabitEthernet3/1
  switchport mode trunk
 !
 interface GigabitEthernet4/1
- switchport access vlan 321
  switchport mode trunk
 !
 interface GigabitEthernet5/1
@@ -37,13 +36,12 @@ interface GigabitEthernet6/1
  switchport mode trunk
 !
 interface GigabitEthernet7/1
+ switchport mode trunk
 !
 interface GigabitEthernet8/1
  switchport mode trunk
 !
 interface GigabitEthernet9/1
- switchport access vlan 324
- switchport mode trunk
 !
 interface Vlan1
  no ip address
