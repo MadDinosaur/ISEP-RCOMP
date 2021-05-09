@@ -20,28 +20,28 @@ ip dhcp excluded-address 10.126.81.2
 !
 ip dhcp pool NETWORKBUILDING5_DMZ
  network 10.126.81.0 255.255.255.0
- default-router 10.126.82.5
+ default-router 10.126.81.1
  dns-server 10.126.81.2
  domain-name rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING5_WIFI
  network 10.126.84.64 255.255.255.192
- default-router 10.126.82.5
+ default-router 10.126.84.129
  dns-server 10.126.81.2
  domain-name rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING5_FIRST_FLOOR
  network 10.126.84.192 255.255.255.192
- default-router 10.126.82.5
+ default-router 10.126.84.193
  dns-server 10.126.81.2
  domain-name rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING5_GROUND_FLOOR
  network 10.126.86.64 255.255.255.192
- default-router 10.126.82.5
+ default-router 10.126.86.65
  dns-server 10.126.81.2
  domain-name rcomp-20-21-dl-g1
 ip dhcp pool NETWORKBUILDING5_VoIP
  network 10.126.86.128 255.255.255.192
- default-router 10.126.82.5
- option 150 ip 10.126.82.5
+ default-router 10.126.86.129
+ option 150 ip 10.126.86.129
  dns-server 10.126.81.2
  domain-name rcomp-20-21-dl-g1
 !
