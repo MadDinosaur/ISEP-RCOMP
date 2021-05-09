@@ -33,11 +33,12 @@ ip dhcp pool NETWORKBUILDING5_FIRST_FLOOR
  default-router 10.126.84.193
  dns-server 10.126.81.2
  domain-name rcomp-20-21-dl-g1
-ip dhcp pool NETWORKBUILDING5_GROUND_FLOOR
+ip dhcp pool NETWORKBUILDING5_FIRST_ZERO
  network 10.126.86.64 255.255.255.192
  default-router 10.126.86.65
  dns-server 10.126.81.2
  domain-name rcomp-20-21-dl-g1
+ip dhcp pool NETWORKBUILDING5_exit
 ip dhcp pool NETWORKBUILDING5_VoIP
  network 10.126.86.128 255.255.255.192
  default-router 10.126.86.129
@@ -116,7 +117,20 @@ router ospf 2021
  network 10.126.81.0 0.0.0.255 area 5
  network 10.126.82.0 0.0.0.127 area 0
 !
+router rip
+!
 ip classless
+ip route 10.126.80.0 255.255.255.0 10.126.82.2 
+ip route 10.126.84.64 255.255.255.192 10.126.82.2 
+ip route 10.126.85.0 255.255.255.192 10.126.82.2 
+ip route 10.126.85.192 255.255.255.192 10.126.82.2 
+ip route 10.126.86.0 255.255.255.192 10.126.82.2 
+ip route 10.126.82.128 255.255.255.128 10.126.82.1 
+ip route 10.126.83.128 255.255.255.128 10.126.82.1 
+ip route 10.126.84.0 255.255.255.128 10.126.82.1 
+ip route 10.126.86.192 255.255.255.255 10.126.82.1 
+ip route 10.126.87.64 255.255.255.255 10.126.82.1 
+ip route 0.0.0.0 0.0.0.0 10.126.82.3 
 ip route 0.0.0.0 0.0.0.0 10.126.82.5 
 !
 ip flow-export version 9
@@ -166,13 +180,13 @@ ephone-dn 2
 !
 ephone 1
  device-security-mode none
- mac-address 000B.BE05.80E9
+ mac-address 000B.BE57.C36C
  type 7960
  button 1:1
 !
 ephone 2
  device-security-mode none
- mac-address 00E0.F9BD.AE40
+ mac-address 00D0.971B.31AE
  type 7960
  button 1:2
 !
@@ -181,6 +195,8 @@ line con 0
 line aux 0
 !
 line vty 0 4
+ login
+line vty 5 15
  login
 !
 !
