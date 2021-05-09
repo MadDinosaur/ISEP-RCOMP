@@ -164,7 +164,6 @@ access-list 103 permit ip any 10.126.83.0 0.0.0.127
 access-list 103 permit udp any any eq bootpc
 access-list 103 permit udp any any eq bootps
 access-list 103 permit udp any any eq tftp
-access-list 103 permit tcp any host 10.126.83.2 eq domain
 access-list 104 permit ip 10.126.87.32 0.0.0.31 any
 access-list 104 permit icmp any any
 access-list 104 permit udp any any eq bootpc
@@ -178,7 +177,7 @@ access-list 105 permit ospf any any
 !
 !
 dial-peer voice 1 voip
- destination-pattern 3........
+ destination-pattern 333333333
  session target ipv4:10.126.82.1
 !
 dial-peer voice 2 voip
@@ -213,17 +212,17 @@ ephone-dn 1
 ephone-dn 2
  number 222222222
 !
-ephone 1
- device-security-mode none
- mac-address 0001.970A.0624
- type 7960
- button 1:2
-!
 ephone 2
  device-security-mode none
- mac-address 0009.7C95.18DC
+ mac-address 0040.0B02.3ED1
  type 7960
  button 1:1
+!
+ephone 1
+ device-security-mode none
+ mac-address 0005.5E51.275C
+ type 7960
+ button 1:2
 !
 line con 0
 !
