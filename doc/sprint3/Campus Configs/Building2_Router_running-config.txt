@@ -76,33 +76,34 @@ interface FastEthernet0/0
 interface FastEthernet0/0.1
  encapsulation dot1Q 340
  ip address 10.126.82.1 255.255.255.128
- ip access-group 35 in
+ ip access-group 115 in
  ip nat outside
 !
 interface FastEthernet0/0.2
  encapsulation dot1Q 320
  ip address 10.126.84.1 255.255.255.192
- ip access-group 30 in
+ ip access-group 116 in
 !
 interface FastEthernet0/0.3
  encapsulation dot1Q 321
  ip address 10.126.83.129 255.255.255.128
- ip access-group 31 in
+ ip access-group 117 in
 !
 interface FastEthernet0/0.4
  encapsulation dot1Q 322
  ip address 10.126.82.129 255.255.255.128
- ip access-group 32 in
+ ip access-group 118 in
 !
 interface FastEthernet0/0.5
  encapsulation dot1Q 323
  ip address 10.126.87.65 255.255.255.240
+ ip access-group 120 in
  ip nat inside
 !
 interface FastEthernet0/0.6
  encapsulation dot1Q 324
  ip address 10.126.86.193 255.255.255.192
- ip access-group 33 in
+ ip access-group 119 in
 !
 interface FastEthernet0/1
  no ip address
@@ -135,6 +136,26 @@ ip route 0.0.0.0 0.0.0.0 10.126.82.5
 ip flow-export version 9
 !
 !
+access-list 116 permit ip 10.126.84.0 0.0.0.63 any
+access-list 116 permit icmp any any
+access-list 116 permit udp any any eq bootps
+access-list 116 permit udp any any eq tftp
+access-list 116 permit udp any any eq bootpc
+access-list 117 permit ip 10.126.83.128 0.0.0.127 any
+access-list 117 permit icmp any any
+access-list 117 permit udp any any eq bootpc
+access-list 117 permit udp any any eq bootps
+access-list 117 permit udp any any eq tftp
+access-list 118 permit ip 10.126.82.128 0.0.0.127 any
+access-list 118 permit icmp any any
+access-list 118 permit udp any any eq bootpc
+access-list 118 permit udp any any eq bootps
+access-list 118 permit udp any any eq tftp
+access-list 119 permit ip 10.126.86.192 0.0.0.63 any
+access-list 119 permit icmp any any
+access-list 119 permit udp any any eq bootpc
+access-list 119 permit udp any any eq bootps
+access-list 119 permit udp any any eq tftp
 !
 !
 !
